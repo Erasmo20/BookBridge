@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <ul>
+        {% for item in items %}
+            <li>Livro: {{ item.name }} - Clube: {{ item.clube }} - Comentário: {{ item.comentario }}
+                <a href="{{ url_for('update', id=item.id) }}">Editar</a> | 
+                <a href="{{ url_for('delete', id=item.id) }}">Excluir</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('create_comen') }}">Adicionar Comentário</a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form action="{{ url_for('create_comen') }}" method="POST">
+        <label for="name">Livro:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="clube">Clube:</label>
+        <input type="text" id="clube" name="clube" required>
+        <label for="comentario">Comentário:</label>
+        <input type="text" id="comentario" name="comentario" required>
+        <button type="submit">Adicionar Comentário</button>
+    </form>
+{% endblock %}
